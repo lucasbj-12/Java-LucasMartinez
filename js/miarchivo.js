@@ -43,4 +43,12 @@ if(cuestionario == 1){
 }else if(cuestionario == 5){
         alert("Se le recomienda el Plan Oro de entrenamiento.")
     }
+    for (let i = 1; i <= 20; i++){
+        let ingresaNombre = prompt ("Agendar turnos.");
+        console.log("Turno N° "+i+ " Nombre: "+ ingresaNombre)
+    }
+const suma = function (a,b){return console.log(a + b)}
+const resta = function (a,b){return console.log(a - b)}
 
+suma(90,120);
+resta(150,130);
