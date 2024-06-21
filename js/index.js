@@ -1,37 +1,3 @@
-console.dir(document);
-alert("Bienvenido/a.");
-let nombres = prompt("Ingrese su nombre");
-console.log(nombres);
-let ingreseSuApellido = prompt("Ingrese su apellido")
-console.log(ingreseSuApellido)
-const VACIO = "";
-if (nombres != VACIO && ingreseSuApellido != VACIO) {
-    alert("Su nombre es: " + nombres + " " + ingreseSuApellido)
-} else {
-    alert("Falta ingresar informacion")
-}
-let numero = prompt("Ingrese su edad");
-console.log(numero > 18);
-if (numero >= 18) {
-    alert("Su edad es de " + numero + " Años, entonces es mayor de edad")
-} else if (numero <= 18 && numero != VACIO) {
-    alert("Su edad es de " + numero + " Para poder ingresar debe ser mayor de edad.");
-} else {
-    alert("La edad ingresada es incorrecta.")
-}
-let cuestionario = prompt("Cuantos dias a la semana desea entrenar? (1,3,5)");
-console.log(cuestionario > 0);
-if (cuestionario == 1) {
-    alert("Se le recomienda el Plan Bronce de entrenamiento.")
-} else if (cuestionario == 3) {
-    alert("Se le recomienda el Plan Plata de entrenamiento.")
-} else if (cuestionario == 5) {
-    alert("Se le recomienda el Plan Oro de entrenamiento.")
-}
-for (let i = 1; i <= 8; i++) {
-    let ingresaNombre = prompt("Agendar turnos.");
-    alert("Turno N° " + i + " Nombre: " + ingresaNombre)
-}
 //Calcular peso a reducir
 function pesoAreducir(pesoActual, pesoExpectativa){
     let resultado= pesoActual - pesoExpectativa;
@@ -97,13 +63,26 @@ tituloH1.innerText = "Entrenadores personales en linea";
 console.log(tituloH1.innerText);
 tituloH1.style.color = 'red';
 tituloH1.style.backgroundColor =  'black';
-tituloH1.style.padding = '10rem';
+tituloH1.style.padding = '2rem';
 ///////
-const cuerpo = document.body;
-cuerpo.style.backgroundColor ='grey';
-cuerpo.style.padding = '5rem';
+cuerpo.style.backgroundColor ='white';
 ///////
 const articuloDiv = document.createElement('article');
 articuloDiv.id = 'articulo';
 articuloDiv.classList.add('notas', 'texto');
 cuerpo.appendChild(articuloDiv);
+///Eventos
+const mainIndex = document.querySelector('#mainI');
+const boton = document.createElement('button');
+boton.textContent = 'Ingresar';
+boton.type = 'button';
+mainIndex.appendChild(boton);
+boton.style.backgroundColor = 'red';
+boton.style.padding = '1rem';
+boton.style.width = '6rem';
+boton.style.margin = '2rem';
+boton.style.fontSize = '1rem';
+
+boton.onclick = () => {
+alert("No es posible ingresar en este momento.");
+};
